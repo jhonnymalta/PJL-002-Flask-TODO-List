@@ -1,0 +1,22 @@
+{% extends '_layout.html'%} {% block content %}
+<div class="container">
+  <img src="../static/images/flasklogo.jpg" alt="Flask Logo" />
+  <h1>Welcome to Flask templates</h1>
+  <h2></h2>
+  <div>
+    <ul>
+      {% for item in task %}
+      <li>{{item}}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div>
+    {% if 'SALEM' in task %}
+    <p>Found you Salem!</p>
+    {% else %}
+    <p>Hmm.. Salem is not in this list!</p>
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}
